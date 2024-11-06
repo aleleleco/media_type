@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Mídia</title>
+    <link rel="stylesheet" href="{% static '/styles/styles.css '%}">
+</head>
+<body>
+    <h1>Organizador de Mídia</h1>
+
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+
+        <label for="pasta_origem">Pasta de origem:</label>
+        <input type="text" id="pasta_origem" name="pasta_origem">
+
+        <label for="pasta_destino">Pasta de destino:</label>
+        <input type="text" id="pasta_destino" name="pasta_destino">
+
+        <label for="tipos_media">Tipos de mídia:</label>
+        <select id="tipos_media" name="tipos_media" multiple>
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="png">PNG</option>
+            <option value="gif">GIF</option>
+            <option value="webp">WEBP</option>
+            <option value="mp4">MP4</option>
+            <option value="avi">AVI</option>
+            <option value="mov">MOV</option>
+        </select>
+
+        <label for="apagar_arquivos" style="color: brown;">Apagar arquivos originais após a organização:</label>
+        <input type="checkbox" id="apagar_arquivos" name="apagar_arquivos">
+
+        <button type="submit">Organizar Arquivos</button>
+    </form>
+
+    <script>
+        // JavaScript para adicionar funcionalidades adicionais (opcional)
+        // Exemplo: validação de campos, exibição de mensagens de progresso, etc.
+    </script>
+</body>
+</html>
