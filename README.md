@@ -1,0 +1,3 @@
+Organizador de midias
+Copia midias lendo os dados Exif, propriedades, ou de arquivos .json quando exportados do google takeout
+Em desenvolvimento...
